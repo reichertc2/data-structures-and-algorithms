@@ -16,16 +16,16 @@ const nameArray = [
   { firstName: 'Chris', lastName: 'Paul' },
   { firstName: 'Chris', lastName: 'Jones' }
 ];
-// const toLastNames = people => {
-//   // Solution code here...
-//   let localArray = [];
-//   people.map(()=>{
-//     let string = `${people.firstName} ${people.lastName}`;
-//     localArray.push(string);
-//   });
-//   return localArray;
-// };
-// toLastNames(nameArray);
+const toLastNames = people => {
+  // Solution code here...
+  let localArray = [];
+  people.map((name) => {
+    let string = `${name.firstName} ${name.lastName}`;
+    localArray.push(string);
+  });
+  return localArray;
+};
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -81,11 +81,13 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-  arr.reduce((acc, curr) => {
-
-  });
+  let accum = (arr.reduce((acc, curr) => {
+    // console.log(acc);
+    return acc + 1;
+  }, 0));
+  return accum;
 };
-countNumberOfElements(numArray);
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -145,12 +147,12 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
-  arr.reduce(()=>{
-    
-  });
-
+  let localArray = [];
+    arr.reduce((acc, name) => {
+      return localArray.push(name.name);
+    }, []);
+  return localArray;
 };
-returnNames(starWarsData);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -164,7 +166,7 @@ const reversedString = (str) => {
   let arr = str.split('');
   let newString = arr.reduce((letterA, letterB) => {
     return letterB + letterA;
-  }, '');return newString;
+  }, ''); return newString;
 };
 
 reversedString(string);
