@@ -148,9 +148,11 @@ let starWarsData = [{
 const returnNames = (arr) => {
   // Solution code here...
   let localArray = [];
-  arr.reduce((acc, name) => {
-    return localArray.push(name.name);
-  }, []);
+
+    arr.reduce((acc, name) => {
+      return localArray.push(name.name);
+    }, []);
+
   return localArray;
 };
 /* ------------------------------------------------------------------------------------------------

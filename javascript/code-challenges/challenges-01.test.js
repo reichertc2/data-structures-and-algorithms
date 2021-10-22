@@ -120,11 +120,10 @@ const addNumbers = (num, arr, times, callback) => {
     for (let i=0;i<times;i++){
       localArray.push(num);
     }
-    
   });
   return localArray;
 };
-addNumbers(testNumber,testStringArray,5,addValues);
+addNumbers(testNumber,testNumArray,5,addValues);
 
 /* ------------------------------------------------------------------------------------------------
 
