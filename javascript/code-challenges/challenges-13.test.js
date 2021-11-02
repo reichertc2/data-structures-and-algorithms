@@ -49,6 +49,13 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  let localArray = [];
+  return arr.map((string, value) =>
+    localArray.push(string.includes(':\)'));
+  return localArray;
+
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
