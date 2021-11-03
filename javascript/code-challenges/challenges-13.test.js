@@ -49,13 +49,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
-  let localArray = [];
-  return arr.map((string, value) =>
-    localArray.push(string.includes(':\)'));
-  return localArray;
-
-
-
+  return arr.filter((string) =>
+    (string.includes(':)')));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,10 +63,11 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  return arr.map(number => `${number.substring(1, 4)}${number.substring(6, 9)}${number.substring(10)}`);
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 
+CHALLENGE 5
 
 Write a function named onlyOddChars that takes in a string and returns only the odd-index characters from that string.
 
@@ -80,6 +76,7 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  return str.split('').filter((element, idx) => idx % 2 === 1).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -90,6 +87,7 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  return arr.every(string=> string.includes(':)'));
 };
 
 /* ------------------------------------------------------------------------------------------------
