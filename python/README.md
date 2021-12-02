@@ -5,6 +5,7 @@
 ### Table of Contents
 1. ([Reverse_array](./reverse_array/README.md))
 1. ([Array_insert_shift](array_insert_shift/README.md))
+1. ([Array_Binary_Saerch](array_binary_search/README.md))
 
 ### Folder and Challenge Setup
 
