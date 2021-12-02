@@ -2,6 +2,11 @@
 
 ## Language: `Python`
 
+### Table of Contents
+1. ([Reverse_array](./reverse_array/README.md))
+1. ([Array_insert_shift](array_insert_shift/README.md))
+1. ([Array_Binary_Saerch](array_binary_search/README.md))
+
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
