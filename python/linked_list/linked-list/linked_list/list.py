@@ -5,14 +5,19 @@ class Node:
 
 
 class LinkedList:
-    def __init__(self, value):
-        self.value = value
+    def __init__(self):
+        self.head = None
 
-    def insert():
-        pass
+    def insert(self, next):
+        self.head = Node(next,self.head)
 
-    def include():
-        pass
+    def includes(self, value=None):
+        for value in self.head.value:
+            if value == self.head:
+                return True
+            elif value == self.head.next:
+                return True
+        return False
 
     def __str__():
         pass

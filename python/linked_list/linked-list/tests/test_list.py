@@ -40,28 +40,38 @@ def testNode_d():
 # @pytest.mark.skip(reason='not quite time')
 def test_LinkedList_a():
     assert LinkedList.insert
-    assert LinkedList.include
+    assert LinkedList.includes
     assert LinkedList.__str__
 
-
+# @pytest.mark.skip(reason='not quite time')
 def test_LinkedList_b():
-    node = LinkedList('value')
-    expected = 'value'
-    actual = node.value
+    node = LinkedList()
+    expected =  None
+    actual = node.head
     assert expected == actual
 
 # @pytest.mark.skip(reason='not quite time')
-
-
-
-
-@pytest.mark.skip(reason='not quite time')
-def test_LinkedList_c():
-    actual = LinkedList('value')
-    expected = 'value'
-    assert actual == expected
-
+def test_LinkedList_insert_a():
+    linked_list = LinkedList()
+    linked_list.insert('gizmo')
+    expected = linked_list.head
+    actual = 'gizmo'
+    assert expected == actual
 
 @pytest.mark.skip(reason='not quite time')
-def test_LinkedList_d():
-    pass
+def test_LinkedList_insert_a():
+    linked_list = LinkedList()
+    linked_list.insert('gizmo')
+    expected = linked_list.head
+    actual = 'gizmo'
+    assert expected == actual
+
+
+# @pytest.mark.skip(reason='not quite time')
+def test_LinkedList_includes_a():
+    linked_list = LinkedList()
+    linked_list.insert('gizmo')
+    linked_list.insert('gabriel')
+    actual = linked_list.includes('gizmo')
+    expected = True
+    assert expected == actual
