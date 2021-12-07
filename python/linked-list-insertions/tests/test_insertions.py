@@ -66,7 +66,7 @@ def test_LinkedList_append_d():
 # @pytest.mark.skip("todo")
 def test_LinkedList_insert_before_a():
     linked_list = LinkedList()
-    assert linked_list.insert_before(node_a,1) == 1
+    assert linked_list.insert_before(node_a,node_a) == True
 
 
 

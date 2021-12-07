@@ -1,3 +1,6 @@
+from os import truncate
+
+
 class Node:
     def __init__(self, head,next= None):
         self.head = head
@@ -34,6 +37,7 @@ class LinkedList:
         print(placement.head)
         if item.head == placement.head:
             print('True')
+            return True
 
 
 
