@@ -1,4 +1,4 @@
-from linked_list.list import Node, LinkedList
+from linked_list.list import  Node, LinkedList
 import pytest
 
 
@@ -9,8 +9,6 @@ def test_Node_a():
     assert Node('first go')
 
 # @pytest.mark.skip(reason='not quite time')
-
-
 def testNode_b():
     node = Node('first go')
     actual = node.value
@@ -18,17 +16,13 @@ def testNode_b():
     assert actual == expected
 
 # @pytest.mark.skip(reason='not quite time')
-
-
 def testNode_c():
     node = Node('first go', 'second')
     actual = node.next
     expected = 'second'
     assert actual == expected
 
-# @pytest.mark.skip(reason='not quite time')
-
-
+@pytest.mark.skip(reason='not quite time')
 def testNode_d():
     node = Node('first go')
     actual = node.next
@@ -67,7 +61,7 @@ def test_LinkedList_insert_a():
     assert expected == actual
 
 
-# @pytest.mark.skip(reason='not quite time')
+@pytest.mark.skip(reason='not quite time')
 def test_LinkedList_includes_a():
     linked_list = LinkedList()
     linked_list.insert('gizmo')

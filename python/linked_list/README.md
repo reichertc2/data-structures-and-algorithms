@@ -11,7 +11,7 @@ k-th value from the end of a linked list.
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![Witeboard](/assets/code-ch-7.png)
+![Linked List - KTH - Whiteboard](/assets/code-ch-7.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->

@@ -11,6 +11,39 @@ class LinkedList:
     def insert(self, next):
         self.head = Node(next, self.head)
 
+    def includes(self, value=None):
+        for value in self.head.value:
+            if value == self.head:
+                return True
+            elif value == self.head.next:
+                return True
+        return False
+
+    def __str__():
+        pass
+
+    def append(self,item):
+        end_insert = Node(item)
+        # print(end_insert.head.head)
+        if self.head is None:
+            self.head = end_insert
+            return
+        end = self.head
+        while (end.next):
+            end = end.next
+        end.next = end_insert
+        # print(end.next.head.head)
+
+    def insert_before(self,item, placement):
+        new_node = Node(item)
+        print(placement.value)
+        if item.value == placement.value:
+            print('True')
+            return True
+
+    def insert_after(self):
+        pass
+
     def kth_from_end(self, k_element):
         length_count = 0
         temp = self.head

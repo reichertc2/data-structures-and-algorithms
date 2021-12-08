@@ -1,4 +1,4 @@
-from linked_list_insertions.insertions import LinkedList, Node
+from linked_list.list import LinkedList, Node
 import pytest
 
 node_a = Node('gizmo')
@@ -18,7 +18,7 @@ def test_insert_a():
     linked_list = LinkedList()
     linked_list.insert(node_a)
     expected = 'gizmo'
-    assert linked_list.head.head.head =='gizmo'
+    assert linked_list.head.value.value =='gizmo'
     assert linked_list.head.next == None
 
 # @pytest.mark.skip("todo")
@@ -28,7 +28,7 @@ def test_insert_b():
     linked_list = LinkedList()
     linked_list.insert(node_a)
     linked_list.insert(node_b)
-    actual = linked_list.head.next.head.head
+    actual = linked_list.head.next.value.value
     expected = 'gizmo'
     assert expected == actual
 
@@ -36,13 +36,13 @@ def test_insert_b():
 def test_LinkedList_append_a():
     linked_list = LinkedList()
     linked_list.append(node_c)
-    assert node_c.head == 'trevor'
+    assert node_c.value == 'trevor'
 
-# @pytest.mark.skip("todo")
+@pytest.mark.skip("todo")
 def test_LinkedList_append_b():
     linked_list = LinkedList()
     linked_list.append(node_c)
-    assert linked_list.head.head.next == None
+    assert linked_list.head.next.value == None
 
 # @pytest.mark.skip("todo")
 def test_LinkedList_append_c():
@@ -50,7 +50,7 @@ def test_LinkedList_append_c():
     linked_list.insert(node_a)
     linked_list.append(node_c)
     expected = 'trevor'
-    actual = linked_list.head.next.head.head
+    actual = linked_list.head.next.value.value
     assert expected == actual
 
 # @pytest.mark.skip("todo")
@@ -60,7 +60,7 @@ def test_LinkedList_append_d():
     linked_list.insert(node_b)
     linked_list.append(node_c)
     expected = 'trevor'
-    actual = linked_list.head.next.next.head.head
+    actual = linked_list.head.next.next.value.value
     assert expected == actual
 
 # @pytest.mark.skip("todo")
@@ -70,6 +70,6 @@ def test_LinkedList_insert_before_a():
 
 
 
-@pytest.mark.skip("todo")
+# @pytest.mark.skip("todo")
 def test_LinkedList_insert_afer_a():
     pass
