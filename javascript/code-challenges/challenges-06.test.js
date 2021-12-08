@@ -23,19 +23,19 @@ Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
 const getNames = (arr) => {
-  let localArray = [];
-  arr.map((value) => {
-    let name = value.name;
-    let array = name.split('');
-    let reversed = array.reduce((newString, currentLetter) => {
-      return currentLetter + newString;
-    }, ''); localArray.push(reversed);
-    console.log(reversed);
-  }); return localArray;
+  // let localArray = [];
+  // arr.map((value) => {
+  //   let name = value.name;
+  //   let array = name.split('');
+  //   let reversed = array.reduce((newString, currentLetter) => {
+  //     return currentLetter + newString;
+  //   }, ''); localArray.push(reversed);
+  //   console.log(reversed);
+  // }); return localArray;
   // console.log(arr[0].name);
 };
 
-getNames();
+// getNames();
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
