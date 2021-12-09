@@ -12,15 +12,21 @@ class LinkedList:
         self.head = Node(next, self.head)
 
     def includes(self, value=None):
-        for value in self.head.value:
-            if value == self.head:
+        current = self.head
+        while current:
+            if current.value == value:
                 return True
-            elif value == self.head.next:
-                return True
+            current = current.next
         return False
 
-    def __str__():
-        pass
+    def __str__(self):
+        current = self.head
+        output = ''
+        while current:
+            output += '{ ' + current.value + ' } -> '
+            current = current.next
+        output += 'NULL'
+        return output
 
     def append(self,item):
         end_insert = Node(item)
@@ -36,10 +42,31 @@ class LinkedList:
 
     def insert_before(self,item, placement):
         new_node = Node(item)
-        print(placement.value)
-        if item.value == placement.value:
-            print('True')
-            return True
+        while placement.value != placement:
+            print('Searching for Node')
+
+        if placement == new_node:
+            print('Node located: ')
+
+
+        print_able = new_node.value
+        print('This is the return of insert_before: ',print_able)
+        # print(placement.value)
+        # if item.value == placement.value:
+        #     print('True')
+        #     return True
+
+
+
+
+
+
+
+
+
+
+
+
 
     def insert_after(self):
         pass
@@ -71,11 +98,11 @@ class LinkedList:
             return item.value
 
 
-# linked_list = LinkedList()
-# linked_list.insert(2)
-# linked_list.insert(8)
-# linked_list.insert(3)
-# linked_list.insert(1)
+linked_list = LinkedList()
+linked_list.insert(5)
+linked_list.insert(3)
+linked_list.insert(2)
+linked_list.insert(1)
 
 # print('index 0: ', linked_list.head.value)
 # print('index 1: ', linked_list.head.next.value)
@@ -83,4 +110,17 @@ class LinkedList:
 # print('index 3: ', linked_list.head.next.next.next.value)
 
 # test = linked_list.kth_from_end(0)
-# print(test)
+# print(linked_list)
+
+
+
+linked_list.insert_before(4, 5)
+
+# print('index 0: ', linked_list.head.value)
+# print('index 1: ', linked_list.head.next.value)
+# print('index 2: ', linked_list.head.next.next.value)
+# print('index 3: ', linked_list.head.next.next.next.value)
+# print('index 4: ', linked_list.head.next.next.next.next.value)
+
+
+print('End of Line...')

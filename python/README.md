@@ -3,9 +3,11 @@
 ## Language: `Python`
 
 ### Table of Contents
-1. ([Reverse_array](./code_challenges/reverse_array/README.md))
-1. ([Array_insert_shift](./code_challenges/array_insert_shift/README.md))
-1. ([Array_Binary_Saerch](./code_challenges/array_binary_search/README.md))
+1. ([Reverse Array](./code_challenges/reverse_array/README.md))
+1. ([Array Insert Shift](./code_challenges/array_insert_shift/README.md))
+1. ([Array Binary Search](./code_challenges/array_binary_search/README.md))
+1. ([Linked Lists](./linked_list/README.md))
+
 
 ### Folder and Challenge Setup
 
