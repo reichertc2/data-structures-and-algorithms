@@ -42,7 +42,7 @@ class LinkedList:
 
     def insert_before(self,item, placement):
         new_node = Node(item)
-        while placement.value != placement:
+        while placement != placement:
             print('Searching for Node')
 
         if placement == new_node:

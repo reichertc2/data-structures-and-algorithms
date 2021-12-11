@@ -63,7 +63,7 @@ def test_LinkedList_append_d():
     actual = linked_list.head.next.next.value.value
     assert expected == actual
 
-# @pytest.mark.skip("todo")
+@pytest.mark.skip("todo")
 def test_LinkedList_insert_before_a():
     linked_list = LinkedList()
     assert linked_list.insert_before(node_a,node_a) == True
