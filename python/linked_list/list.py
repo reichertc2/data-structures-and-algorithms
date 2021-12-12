@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self, value, next=0):
+    def __init__(self, value, next=None):
         self.value = value
         self.next = next
 
@@ -41,35 +41,48 @@ class LinkedList:
         # print(end.next.head.head)
 
     def insert_before(self,item, placement):
-        new_node = Node(item)
-        while placement != placement:
-            print('Searching for Node')
+        pass
+    #     new_node = Node(item)
+    #     while placement != placement:
+    #         print('Searching for Node')
 
-        if placement == new_node:
-            print('Node located: ')
+    #     if placement == new_node:
+    #         print('Node located: ')
 
 
-        print_able = new_node.value
-        print('This is the return of insert_before: ',print_able)
+    #     print_able = new_node.value
+    #     print('This is the return of insert_before: ',print_able)
         # print(placement.value)
         # if item.value == placement.value:
         #     print('True')
         #     return True
 
 
+    def insert_after(self, after_node, new_node):
+        print(' after this node: ',after_node)
+        print(' new node: ',new_node)
+        if after_node is None:
+            return None
+        old_node =  Node(after_node)
+
+        print(' Old Node: value',old_node.next)
+        inserted_node = Node(new_node)
+        print(' New Node: value',inserted_node.value)
+        old_node.next = inserted_node.value
+        inserted_node.next = after_node
+        print(' New Node: next',inserted_node.next)
 
 
+        inserted_node.value = after_node
+        print(' to inserted_node.value',inserted_node.value)
+
+        after_node = inserted_node
+        print('linked_list.value: ',after_node.value)
+        print(' after_node.next: ',after_node.next)
+
+        return after_node.value
 
 
-
-
-
-
-
-
-
-    def insert_after(self):
-        pass
 
     def kth_from_end(self, k_element):
         length_count = 0
@@ -114,7 +127,9 @@ linked_list.insert(1)
 
 
 
-linked_list.insert_before(4, 5)
+linked_list.insert_after(3, 4)
+
+# linked_list.insert_after(None,6)
 
 # print('index 0: ', linked_list.head.value)
 # print('index 1: ', linked_list.head.next.value)
@@ -122,5 +137,10 @@ linked_list.insert_before(4, 5)
 # print('index 3: ', linked_list.head.next.next.next.value)
 # print('index 4: ', linked_list.head.next.next.next.next.value)
 
+# print('index 0: ', linked_list.head.value)
+# print('index 1: ', linked_list.head.next.value)
+# print('index 2: ', linked_list.head.next.next.value)
+# print('index 3: ', linked_list.head.next.next.next.value)
+# print('index 4: ', linked_list.head.next.next.next.next.value)
 
 print('End of Line...')
