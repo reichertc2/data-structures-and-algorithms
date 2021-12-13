@@ -1,12 +1,17 @@
 # Challenge Summary 05
-TBD
+Singly Linked Lists
 
 ## Specifications
-- TBD
+- Read all of these instructions carefully.
+- Name things exactly as described.
+- Do all your work in a your data-structures-and-algorithms public repository.
+- Create a new branch in your repo named as noted below.
+- Follow the language-specific instructions for the challenge type listed below.
+- Update the “Table of Contents” - in the README at the root of the repository - with a link to this challenge’s README file.
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![TBD](../wireframes/code-ch-05.png)
+![TBD](../code_challenges/wireframes/code-ch-05.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -16,14 +21,47 @@ The approach I took was to write the code first with an idea of getting to the e
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
 ```
-TBD
+class Node:
+    def __init__(self, value, next=None):
+        self.value = value
+        self.next = next
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert(self, next):
+        self.head = Node(next, self.head)
+
+    def includes(self, value=None):
+        current = self.head
+        while current:
+            if current.value == value:
+                return True
+            current = current.next
+        return False
+
+    def __str__(self):
+        current = self.head
+        output = ''
+        while current:
+            output += '{ ' + current.value + ' } -> '
+            current = current.next
+        output += 'NULL'
+        return output
 ```
 
 # Challenge Summary 06
-TBD
+Extend a Linked List to allow various insertion methods
 
 ## Specifications
-- TBD
+- Read all of these instructions carefully.
+- Name things exactly as described.
+- Do all your work in a your data-structures-and-algorithms public repository.
+- Create a new branch in your repo named as noted below.
+- Follow the language-specific instructions for the challenge type listed below.
+- Update the “Table of Contents” - in the README at the root of the repository - with a link to this challenge’s README file.
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
@@ -86,29 +124,3 @@ The O space i believe is O(n) with the length of the linked list in question det
             return item.value
 ```
 
-# Challenge Summary 08
-Zip two linked lists.
-
-## Specifications
-- Write a function called zip lists
-- Arguments: 2 linked lists
-- Return: Linked List, zipped as noted below
-- Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
-- Try and keep additional space down to O(1)
-- You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
-
-## Whiteboard Process
-<!-- Embedded whiteboard image -->
-![Linked List - KTH - Whiteboard](../wireframes/code-ch-08.png)
-
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-The approach I took was to write the code first with an idea of getting to the end point.
-
-The O space i believe is O(n) with the length of the linked list in question determines the run time.
-
-## Solution
-<!-- Show how to run your code, and examples of it in action -->
-```
-TBD
-```

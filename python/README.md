@@ -7,6 +7,8 @@
 1. ([Array Insert Shift](./code_challenges/array_insert_shift/README.md))
 1. ([Array Binary Search](./code_challenges/array_binary_search/README.md))
 1. ([Linked Lists](./linked_list/README.md))
+1. ([Zip Linked Lists](./code_challenges/linked_list_zip/README.md))
+1. ([Stack and Queue](./code_challenges/stack_and_queue/README.md))
 
 
 ### Folder and Challenge Setup

@@ -1,4 +1,4 @@
-from linked_list.linked_list_zip import linked_list_zip
+from code_challenges.linked_list_zip.linked_list_zip import linked_list_zip
 from linked_list.list import LinkedList, Node
 import pytest
 
