@@ -11,7 +11,7 @@ Stack and Queue
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![TBD](../wireframes/code-ch-05.png)
+![TBD](../wireframes/code-ch-10.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->

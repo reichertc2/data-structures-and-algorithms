@@ -80,6 +80,15 @@ def test_stack_is_empty_b():
     expected = False
     assert actual ==expected
 
+@pytest.mark.skip(reason='not quite time')
+def test_complete_final_stack():
+    stack = Stack()
+    stack.push(node_a)
+    stack.pop()
+    stack.peek()
+    assert stack.peek() == Exception
+    assert stack.is_empty() == True
+
 def test_queue_enqueue_a():
     queue = Queue()
     expected = queue.front
@@ -111,3 +120,13 @@ def test_queue_enqueue_d():
     actual = queue.front.next.next.value
     expected = 'charlie'
     assert actual == expected
+
+
+@pytest.mark.skip(reason='not quite time')
+def test_complete_final_queue():
+    queue = Queue()
+    queue.enqueue(node_a)
+    queue.dequeue()
+    queue.peek()
+    assert queue.peek() == Exception
+    assert queue.is_empty() == True
