@@ -134,3 +134,10 @@ def test_to_string():
     lst.insert("apple")
     lst.insert("banana")
     assert str(lst) == "{ banana } -> { apple } -> NULL"
+
+def test_final():
+    lst = LinkedList()
+    lst.insert("apple")
+    lst.insert("banana")
+    assert lst.includes("pineapple") == False
+    assert str(lst) == "{ banana } -> { apple } -> NULL"

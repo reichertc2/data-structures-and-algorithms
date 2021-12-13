@@ -1,12 +1,17 @@
 # Challenge Summary 05
-TBD
+Singly Linked Lists
 
 ## Specifications
-- TBD
+- Read all of these instructions carefully.
+- Name things exactly as described.
+- Do all your work in a your data-structures-and-algorithms public repository.
+- Create a new branch in your repo named as noted below.
+- Follow the language-specific instructions for the challenge type listed below.
+- Update the “Table of Contents” - in the README at the root of the repository - with a link to this challenge’s README file.
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![TBD](../wireframes/code-ch-05.png)
+![TBD](../code_challenges/wireframes/code-ch-05.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -16,14 +21,47 @@ The approach I took was to write the code first with an idea of getting to the e
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
 ```
-TBD
+class Node:
+    def __init__(self, value, next=None):
+        self.value = value
+        self.next = next
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert(self, next):
+        self.head = Node(next, self.head)
+
+    def includes(self, value=None):
+        current = self.head
+        while current:
+            if current.value == value:
+                return True
+            current = current.next
+        return False
+
+    def __str__(self):
+        current = self.head
+        output = ''
+        while current:
+            output += '{ ' + current.value + ' } -> '
+            current = current.next
+        output += 'NULL'
+        return output
 ```
 
 # Challenge Summary 06
-TBD
+Extend a Linked List to allow various insertion methods
 
 ## Specifications
-- TBD
+- Read all of these instructions carefully.
+- Name things exactly as described.
+- Do all your work in a your data-structures-and-algorithms public repository.
+- Create a new branch in your repo named as noted below.
+- Follow the language-specific instructions for the challenge type listed below.
+- Update the “Table of Contents” - in the README at the root of the repository - with a link to this challenge’s README file.
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
