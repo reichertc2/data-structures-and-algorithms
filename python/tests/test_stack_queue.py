@@ -99,14 +99,14 @@ def test_complete_final_stack():
 
 # ---------------- Queue testing -----------------
 
-
+@pytest.mark.skip(reason='not quite time')
 def test_queue_enqueue_a():
     queue = Queue()
     expected = queue.front
     actual = None
     assert expected == actual
 
-# @pytest.mark.skip(reason='not quite time')
+@pytest.mark.skip(reason='not quite time')
 def test_queue_enqueue_b():
     queue = Queue()
     queue.enqueue(node_a)
@@ -114,7 +114,7 @@ def test_queue_enqueue_b():
     expected = 'test'
     assert actual == expected
 
-# @pytest.mark.skip(reason='not quite time')
+@pytest.mark.skip(reason='not quite time')
 def test_queue_enqueue_c():
     queue = Queue()
     queue.enqueue(node_a)
