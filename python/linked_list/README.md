@@ -65,7 +65,7 @@ Extend a Linked List to allow various insertion methods
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![TBD](../wireframes/code-ch-06.png)
+![TBD](../code_challenges/wireframes/code-ch-06.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -91,7 +91,7 @@ k-th value from the end of a linked list.
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![Linked List - KTH - Whiteboard](../wireframes/code-ch-07.png)
+![Linked List - KTH - Whiteboard](../code_challenges/wireframes/code-ch-07.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
