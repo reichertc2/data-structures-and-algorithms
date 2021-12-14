@@ -9,6 +9,8 @@
 1. ([Linked Lists](./linked_list/README.md))
 1. ([Zip Linked Lists](./code_challenges/linked_list_zip/README.md))
 1. ([Stack and Queue](./stack_and_queue/README.md))
+1. ([Stack and Queue Psuedo](./code_challenges/stack_queue_pseudo/README.md))
+1. ([Stack Queue Animal Shelter](./stack_queue_animal_shelter/README.md))
 
 
 ### Folder and Challenge Setup
