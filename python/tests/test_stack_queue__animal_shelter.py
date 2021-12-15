@@ -44,7 +44,7 @@ def test_AnimalShelter_enqueue_d():
     expected = Exception('please add Dog or Cat')
     assert actual == expected
 
-# @pytest.mark.skip(reason='not quite time')
+@pytest.mark.skip(reason='not quite time')
 def test_AnimalShelter_enqueue_b():
     shelter.enqueue(dog_a)
     shelter.enqueue(dog_b)
