@@ -12,6 +12,7 @@
 1. ([Stack and Queue Psuedo](./code_challenges/stack_queue_pseudo/README.md))
 1. ([Stack Queue Animal Shelter](./stack_queue_animal_shelter/README.md))
 1. ([Stack Queue Brackets](./code_challenges/stack_queue_brackets/README.md))
+1. ([Trees](./all_trees/README.md))
 
 
 ### Folder and Challenge Setup

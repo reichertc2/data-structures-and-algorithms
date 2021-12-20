@@ -40,45 +40,44 @@ class LinkedList:
         end.next = end_insert
         # print(end.next.head.head)
 
-    def insert_before(self,item, placement):
-        pass
-    #     new_node = Node(item)
-    #     while placement != placement:
-    #         print('Searching for Node')
+    def insert_before(self,value,new_value):
+        if self.head is None:
+            return Exception('empty list')
+        if self.head.value == value:
+            self.head = Node(new_value,self.head)
+            return
 
-    #     if placement == new_node:
-    #         print('Node located: ')
+        current = self.head
 
-
-    #     print_able = new_node.value
-    #     print('This is the return of insert_before: ',print_able)
-        # print(placement.value)
-        # if item.value == placement.value:
-        #     print('True')
-        #     return True
+        while current:
+            if current.next and current.next.value == value:
+                current.next = Node(new_value,current.next)
+                break
+            current.next
+        raise Exception('no before value')
 
 
     def insert_after(self, after_node, new_node):
-        print(' after this node: ',after_node)
-        print(' new node: ',new_node)
+        # print(' after this node: ',after_node)
+        # print(' new node: ',new_node)
         if after_node is None:
             return None
         old_node =  Node(after_node)
 
-        print(' Old Node: value',old_node.next)
+        # print(' Old Node: value',old_node.next)
         inserted_node = Node(new_node)
-        print(' New Node: value',inserted_node.value)
+        # print(' New Node: value',inserted_node.value)
         old_node.next = inserted_node.value
         inserted_node.next = after_node
-        print(' New Node: next',inserted_node.next)
+        # print(' New Node: next',inserted_node.next)
 
 
         inserted_node.value = after_node
-        print(' to inserted_node.value',inserted_node.value)
+        # print(' to inserted_node.value',inserted_node.value)
 
         after_node = inserted_node
-        print('linked_list.value: ',after_node.value)
-        print(' after_node.next: ',after_node.next)
+        # print('linked_list.value: ',after_node.value)
+        # print(' after_node.next: ',after_node.next)
 
         return after_node.value
 
