@@ -18,7 +18,8 @@ def test_binary_tree_b():
     tree = BinaryTree()
     assert tree.root == None
 
-def test_binary_tree_b():
+@pytest.mark.skip('not yet')
+def test_binary_tree_c():
     tree = BinaryTree()
     tree.root.value = 'alpha'
     assert tree.pre_order() == 'alpha'
