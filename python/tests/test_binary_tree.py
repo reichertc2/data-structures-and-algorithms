@@ -1,5 +1,6 @@
 from all_trees.tree_node import Node
 from all_trees.binary_tree import BinaryTree
+from all_trees.binary_search_tree import BinarySearchTree
 import pytest
 
 node_a = Node('alpha')
@@ -18,12 +19,20 @@ def test_binary_tree_b():
     tree = BinaryTree()
     assert tree.root == None
 
-@pytest.mark.skip('not yet')
+# @pytest.mark.skip('not yet')
 def test_binary_tree_c():
-    tree = BinaryTree()
-    tree.root.value = 'alpha'
-    assert tree.pre_order() == 'alpha'
+    tree = BinarySearchTree()
+    tree.add(node_a)
+    assert tree.pre_order() == ['alpha']
 
+# @pytest.mark.skip('not yet')
+def test_binary_tree_d():
+    tree = BinarySearchTree()
+    tree.add(node_a)
+    tree.add(node_b)
+    actual = tree.pre_order()
+    expected = ['alpha','bravo']
+    assert actual == expected
 
 @pytest.mark.skip('not yet')
 def test_binary_tree_final():
