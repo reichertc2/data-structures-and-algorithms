@@ -48,5 +48,9 @@ class BinaryTree:
     def post_order(self):
         pass
 
-    def find_maximum_value():
-        pass
+    def find_maximum_value(self):
+        if self.root is None:
+            return None
+        tree_list = self.pre_order()
+
+        return max(tree_list)
