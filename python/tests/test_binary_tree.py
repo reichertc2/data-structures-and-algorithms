@@ -19,13 +19,13 @@ def test_binary_tree_b():
     tree = BinaryTree()
     assert tree.root == None
 
-# @pytest.mark.skip('not yet')
+@pytest.mark.skip('not yet')
 def test_binary_tree_c():
     tree = BinarySearchTree()
     tree.add(node_a)
     assert tree.pre_order() == ['alpha']
 
-# @pytest.mark.skip('not yet')
+@pytest.mark.skip('not yet')
 def test_binary_tree_d():
     tree = BinarySearchTree()
     tree.add(node_a)
