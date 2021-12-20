@@ -9,6 +9,8 @@ node_c = Node('charlie')
 node_d = Node('delta')
 
 
+
+
 # @pytest.mark.skip('not yet')
 def test_binary_tree_a():
     assert BinaryTree()
@@ -48,7 +50,7 @@ def test_binary_tree_pre_order_final():
     assert actual == expected
 
 
-# @pytest.mark.skip('not yet')
+@pytest.mark.skip('not yet')
 def test_binary_tree_in_order_a():
     tree = BinaryTree(node_a)
 

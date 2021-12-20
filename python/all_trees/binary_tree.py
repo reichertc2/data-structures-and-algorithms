@@ -47,3 +47,6 @@ class BinaryTree:
 
     def post_order(self):
         pass
+
+    def find_maximum_value():
+        pass
