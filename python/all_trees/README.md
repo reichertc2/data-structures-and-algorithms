@@ -44,5 +44,55 @@ The approach I took was to write the code first with an idea of getting to the e
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
 ```
-TBD
+-- Partial --
+    def pre_order(self):
+        pre_order_list = []
+
+        def walk(temp):
+
+            if temp is None:
+                return
+
+            if temp:
+                pre_order_list.append(temp.value)
+
+
+            walk(temp.left_child)
+            walk(temp.right_child)
+
+        walk(self.root)
+
+        return pre_order_list
+```
+
+# Challenge Summary 16
+<!-- Description of the challenge -->
+Find the Maximum Value in a Binary Tree
+
+#### Binary Tree --> find_maximum_value()
+Write the following method for the Binary Tree class
+
+- find maximum value
+    - Arguments: none
+    - Returns: number
+Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Tree Max Value](../code_challenges/wireframes/code-ch-16.png)
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+The approach I took was to write the code first with an idea of getting to the end point.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+```
+def find_maximum_value(self):
+    if self.root is None:
+        return None
+    tree_list = self.pre_order()
+
+    return max(tree_list)
 ```

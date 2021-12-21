@@ -6,6 +6,10 @@ import pytest
 node_a = Node('alpha')
 node_b = Node('bravo')
 node_c = Node('charlie')
+node_d = Node('delta')
+
+
+
 
 # @pytest.mark.skip('not yet')
 def test_binary_tree_a():
@@ -15,31 +19,58 @@ def test_binary_tree_a():
     assert BinaryTree.post_order
     assert Node()
 
-def test_binary_tree_b():
+def test_binary_treepre_order_a():
     tree = BinaryTree()
     assert tree.root == None
 
-@pytest.mark.skip('not yet')
-def test_binary_tree_c():
-    tree = BinarySearchTree()
-    tree.add(node_a)
-    assert tree.pre_order() == ['alpha']
+# @pytest.mark.skip('not yet')
+def test_binary_tree_pre_order_b():
+    tree = BinaryTree(node_a)
 
-@pytest.mark.skip('not yet')
-def test_binary_tree_d():
-    tree = BinarySearchTree()
-    tree.add(node_a)
-    tree.add(node_b)
+    actual = tree.pre_order()
+    expected = ['alpha']
+    assert actual == expected
+
+# @pytest.mark.skip('not yet')
+def test_binary_tree_pre_order_c():
+    tree = BinaryTree(node_a)
+    tree.root.left_child = node_b
     actual = tree.pre_order()
     expected = ['alpha','bravo']
     assert actual == expected
 
-@pytest.mark.skip('not yet')
-def test_binary_tree_final():
-    tree = BinaryTree()
-    tree.root.value = 'alpha'
-    tree.root.left_child.value = 'bravo'
-    tree.root.right_child.value = 'charlie'
+# @pytest.mark.skip('not yet')
+def test_binary_tree_pre_order_final():
+    tree = BinaryTree(node_a)
+    tree.root.left_child = node_b
+    tree.root.right_child = node_c
+    tree.root.left_child.left_child = node_d
     actual = tree.pre_order()
+    expected = ['alpha','bravo','delta','charlie']
+    assert actual == expected
+
+
+@pytest.mark.skip('not yet')
+def test_binary_tree_in_order_a():
+    tree = BinaryTree(node_a)
+
+    actual = tree.in_order()
+    expected = ['alpha']
+    assert actual == expected
+
+@pytest.mark.skip('not yet')
+def test_binary_tree_in_order_b():
+    tree = BinaryTree(node_a)
+    tree.root.left_child = node_b
+    actual = tree.in_order()
+    expected = ['bravo','alpha']
+    assert actual == expected
+
+@pytest.mark.skip('not yet')
+def test_binary_tree_in_order_final():
+    tree = BinaryTree(node_a)
+    tree.root.left_child = node_b
+    tree.root.right_child = node_c
+    actual = tree.in_order()
     expected = ['alpha','bravo','charlie']
     assert actual == expected

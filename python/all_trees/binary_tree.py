@@ -6,46 +6,51 @@ class BinaryTree:
 
     def pre_order(self):
         pre_order_list = []
-        if self.root is None:
-            return
 
-        def walk(temp,side=None):
+        def walk(temp):
+
+            if temp is None:
+                return
+
             if temp:
                 pre_order_list.append(temp.value)
-                return
-            if side == 'left':
-                if temp.left_child == None:
-                    return
-                pre_order_list.append(temp.left_child)
-                return
 
 
-        if self.root != None:
-            temp = self.root
-            walk(temp)
-            walk(temp,'left')
-            # while temp:
-            #     if temp.left_child:
+            walk(temp.left_child)
+            walk(temp.right_child)
 
-            #         temp = temp.left_child.value
-            #         pre_order_list.append(temp)
-            #         return
-            #     temp = temp.right_child
-            #     pre_order_list.append(temp)
-            #     return
+        walk(self.root)
 
-            return pre_order_list
-
-
-
-
-
-
-
-
+        return pre_order_list
 
 
     def in_order(self):
-        pass
+
+        in_order_list = []
+
+        def walk(temp):
+
+            if temp is None:
+                return
+
+            if temp:
+                in_order_list.append(temp.value)
+
+
+            walk(temp.left_child)
+            walk(temp.right_child)
+
+        walk(self.root)
+
+        return in_order_list
+
+
     def post_order(self):
         pass
+
+    def find_maximum_value(self):
+        if self.root is None:
+            return None
+        tree_list = self.pre_order()
+
+        return max(tree_list)
