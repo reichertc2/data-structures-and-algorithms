@@ -99,7 +99,7 @@ def test_complete_final_stack():
 
 # ---------------- Queue testing -----------------
 
-@pytest.mark.skip(reason='not quite time')
+# @pytest.mark.skip(reason='not quite time')
 def test_queue_enqueue_a():
     queue = Queue()
     expected = queue.front
