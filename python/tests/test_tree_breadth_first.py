@@ -10,7 +10,7 @@ node_d = Node('d')
 node_e = Node('e')
 node_f = Node('f')
 
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_tree_breadth_first_a():
     tree = BinaryTree()
     assert tree_breadth_first(tree) == None
@@ -18,7 +18,7 @@ def test_tree_breadth_first_a():
 @pytest.mark.skip(reason='not yet')
 def test_tree_breadth_first_b():
     tree = BinaryTree()
-    tree.root = node_a
+    tree.root = Node('a')
     actual = tree_breadth_first(tree)
-    expected = True
+    expected = ['a']
     assert actual == expected

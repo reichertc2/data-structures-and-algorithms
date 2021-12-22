@@ -25,10 +25,21 @@ from all_trees.tree_node import Node
 def tree_breadth_first(tree):
     queue = Queue()
     queue.front == tree.root
-    print(tree.root.value)
-    if queue.front is None:
+    # print(tree.root.value)
+    tree_list = []
+    temp = queue.front
+    while temp:
+        item = queue.dequeue()
+        tree_list.append(item.value)
+        if temp.left_child != None:
+            queue.enqueue(temp.left_child)
+
+        if temp.right_child != None:
+            queue.enqueue(temp.right_child)
+
+    if temp is None:
         return None
-    return True
+    return tree_list
 
 
 

@@ -45,52 +45,52 @@ def test_binary_tree_pre_order_final():
     expected = ['alpha','bravo','delta','charlie']
     assert actual == expected
 
-@pytest.mark.skip('not yet')
+# @pytest.mark.skip('not yet')
 def test_binary_tree_in_order_a():
     tree = BinaryTree()
-    tree.root = node_a
+    tree.root = Node('alpha')
     actual = tree.in_order()
     expected = ['alpha']
     assert actual == expected
 
-@pytest.mark.skip('not yet')
+# @pytest.mark.skip('not yet')
 def test_binary_tree_in_order_b():
-    tree = BinaryTree(node_a)
-    tree.root.left_child = node_b
+    tree = BinaryTree(Node('alpha'))
+    tree.root.left_child = Node('bravo')
     actual = tree.in_order()
     expected = ['bravo','alpha']
     assert actual == expected
 
-@pytest.mark.skip('not yet')
+# @pytest.mark.skip('not yet')
 def test_binary_tree_in_order_final():
-    tree = BinaryTree(node_a)
-    tree.root.left_child = node_b
-    tree.root.right_child = node_c
+    tree = BinaryTree(Node('alpha'))
+    tree.root.left_child = Node('bravo')
+    tree.root.right_child = Node('charlie')
     actual = tree.in_order()
     expected = ['bravo','alpha','charlie']
     assert actual == expected
 
 
-@pytest.mark.skip('not yet')
+# @pytest.mark.skip('not yet')
 def test_binary_tree_post_order_a():
-    tree = BinaryTree(node_a)
+    tree = BinaryTree(Node('alpha'))
     actual = tree.post_order()
     expected = ['alpha']
     assert actual == expected
 
-@pytest.mark.skip('not yet')
+# @pytest.mark.skip('not yet')
 def test_binary_tree_post_order_b():
-    tree = BinaryTree(node_a)
-    tree.root.left_child = node_b
+    tree = BinaryTree(Node('alpha'))
+    tree.root.left_child = Node('bravo')
     actual = tree.post_order()
     expected = ['bravo','alpha']
     assert actual == expected
 
-@pytest.mark.skip('not yet')
+# @pytest.mark.skip('not yet')
 def test_binary_tree_post_order_final():
-    tree = BinaryTree(node_a)
-    tree.root.left_child = node_b
-    tree.root.right_child = node_c
+    tree = BinaryTree(Node('alpha'))
+    tree.root.left_child = Node('bravo')
+    tree.root.right_child = Node('charlie')
     actual = tree.post_order()
     expected = ['bravo','charlie','alpha']
     assert actual == expected

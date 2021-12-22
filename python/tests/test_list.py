@@ -52,16 +52,16 @@ def test_LinkedList_insert_a():
     actual = 'gizmo'
     assert expected == actual
 
-@pytest.mark.skip(reason='not quite time')
+# @pytest.mark.skip(reason='not quite time')
 def test_LinkedList_insert_a():
     linked_list = LinkedList()
     linked_list.insert('gizmo')
-    expected = linked_list.head
+    expected = linked_list.head.value
     actual = 'gizmo'
     assert expected == actual
 
 
-@pytest.mark.skip(reason='not quite time')
+# @pytest.mark.skip(reason='not quite time')
 def test_LinkedList_includes_a():
     linked_list = LinkedList()
     linked_list.insert('gizmo')

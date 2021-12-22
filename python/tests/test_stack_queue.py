@@ -188,7 +188,7 @@ def test_queue_is_empty_b():
     assert actual ==expected
 
 
-@pytest.mark.skip(reason='not quite time')
+# @pytest.mark.skip(reason='not quite time')
 def test_complete_final_queue():
     queue = Queue()
     queue.enqueue(node_a)
