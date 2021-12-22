@@ -14,6 +14,8 @@
 1. ([Stack Queue Brackets](./code_challenges/stack_queue_brackets/README.md))
 1. ([Trees](./all_trees/README.md))
 1. ([Trees - Breadth-first Traversal](./code_challenges/tree_breadth_first/README.md))
+1. ([Trees - Fizz Buzz](./code_challenges/tree_fizz_buzz/README.md))
+
 
 
 ### Folder and Challenge Setup
