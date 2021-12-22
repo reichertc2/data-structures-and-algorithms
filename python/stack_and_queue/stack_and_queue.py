@@ -41,6 +41,7 @@ class Stack:
 class Queue:
     def __init__(self, front = None):
         self.front = front
+        self.rear = None
 
     def enqueue(self, value = None):
 
@@ -54,17 +55,22 @@ class Queue:
         self.front = self.front or self.rear
 
 
-
-
-
-
-
     def dequeue(self):
-        pass
-    def peek(self):
-        if self.top == None:
+        if not self.front:
             return Exception
-        return self.top.value
+        temp = self.front
+        self.front = self.front.next
+        temp.next = None
+        return temp.value
+
+
+
+
+
+    def peek(self):
+        if self.front == None:
+            return Exception
+        return self.front.value
 
     def is_empty(self):
         if self.front != None:

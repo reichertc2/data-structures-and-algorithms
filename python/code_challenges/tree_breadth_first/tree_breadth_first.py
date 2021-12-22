@@ -18,8 +18,27 @@
 #       breadth.enqueue(front.right)
 
 from stack_and_queue.stack_and_queue import Queue
+from all_trees.binary_tree import BinaryTree
+from all_trees.tree_node import Node
 
 
-def tree_breadth_first():
-    pass
+def tree_breadth_first(tree):
+    queue = Queue()
+    queue.front == tree.root
+    print(tree.root.value)
+    if queue.front is None:
+        return None
+    return True
+
+
+
+
+node_a = Node('a')
+node_b = Node('b')
+node_c = Node('c')
+node_d = Node('d')
+node_e = Node('e')
+node_f = Node('f')
+tree = BinaryTree()
+tree.root = node_a
 
