@@ -36,9 +36,9 @@ class BinaryTree:
             if temp:
                 in_order_list.append(temp.value)
 
-
-            walk(temp.left_child)
             walk(temp.right_child)
+
+        walk(self.root.left_child)
 
         walk(self.root)
 
@@ -46,7 +46,29 @@ class BinaryTree:
 
 
     def post_order(self):
-        pass
+
+        post_order_list = []
+
+        def walk(temp):
+
+            if temp is None:
+                return
+
+            if temp:
+                post_order_list.append(temp.value)
+
+        walk(self.root.left_child)
+        walk(self.root.right_child)
+        walk(self.root)
+
+
+
+        return post_order_list
+
+
+
+
+
 
     def find_maximum_value(self):
         if self.root is None:

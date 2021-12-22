@@ -13,6 +13,7 @@
 1. ([Stack Queue Animal Shelter](./stack_queue_animal_shelter/README.md))
 1. ([Stack Queue Brackets](./code_challenges/stack_queue_brackets/README.md))
 1. ([Trees](./all_trees/README.md))
+1. ([Trees - Breadth-first Traversal](./code_challenges/tree_breadth_first/README.md))
 
 
 ### Folder and Challenge Setup

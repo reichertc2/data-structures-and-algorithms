@@ -99,49 +99,78 @@ def test_complete_final_stack():
 
 # ---------------- Queue testing -----------------
 
-@pytest.mark.skip(reason='not quite time')
+# @pytest.mark.skip(reason='not quite time')
 def test_queue_enqueue_a():
     queue = Queue()
     expected = queue.front
     actual = None
     assert expected == actual
 
-@pytest.mark.skip(reason='not quite time')
+# @pytest.mark.skip(reason='not quite time')
 def test_queue_enqueue_b():
     queue = Queue()
     queue.enqueue(node_a)
-    actual = queue.front.value
+    actual = queue.front.value.value
     expected = 'test'
     assert actual == expected
 
-@pytest.mark.skip(reason='not quite time')
+# @pytest.mark.skip(reason='not quite time')
 def test_queue_enqueue_c():
     queue = Queue()
     queue.enqueue(node_a)
     queue.enqueue(node_b)
-    actual = queue.front.next.value
+    actual = queue.front.next.value.value
     expected = 'beta'
     assert actual == expected
 
-@pytest.mark.skip(reason='not quite time')
+# @pytest.mark.skip(reason='not quite time')
 def test_queue_enqueue_d():
     queue = Queue()
     queue.enqueue(node_a)
     queue.enqueue(node_b)
     queue.enqueue(node_c)
-    actual = queue.front.next.next.value
+    actual = queue.front.next.next.value.value
     expected = 'charlie'
     assert actual == expected
 
+# @pytest.mark.skip(reason='not quite time')
+def test_queue_dequeue_a():
+    queue = Queue()
+    expected = queue.front
+    actual = None
+    assert expected == actual
 
-@pytest.mark.skip(reason='not quite time')
-def test_complete_final_queue():
+# @pytest.mark.skip(reason='not quite time')
+def test_queue_dequeue_b():
     queue = Queue()
     queue.enqueue(node_a)
     queue.dequeue()
-    queue.peek()
-    assert queue.peek() == Exception
-    assert queue.is_empty() == True
+    actual = queue.front
+    expected = None
+    assert actual == expected
+
+# @pytest.mark.skip(reason='not quite time')
+def test_queue_dequeue_c():
+    queue = Queue()
+    queue.enqueue(node_a)
+    queue.enqueue(node_b)
+    queue.dequeue()
+    actual = queue.front.value.value
+    expected = 'beta'
+    assert actual == expected
+
+# @pytest.mark.skip(reason='not quite time')
+def test_queue_dequeue_d():
+    queue = Queue()
+    queue.enqueue(node_a)
+    queue.enqueue(node_b)
+    queue.enqueue(node_c)
+    queue.dequeue()
+    queue.dequeue()
+    actual = queue.front.value.value
+    expected = 'charlie'
+    assert actual == expected
+
 
 # @pytest.mark.skip(reason='not quite time')
 def test_queue_is_empty_a():
@@ -157,3 +186,13 @@ def test_queue_is_empty_b():
     actual = queue.is_empty()
     expected = False
     assert actual ==expected
+
+
+@pytest.mark.skip(reason='not quite time')
+def test_complete_final_queue():
+    queue = Queue()
+    queue.enqueue(node_a)
+    queue.dequeue()
+    queue.peek()
+    assert queue.peek() == Exception
+    assert queue.is_empty() == True
