@@ -15,7 +15,7 @@
 1. ([Trees](./all_trees/README.md))
 1. ([Trees - Breadth-first Traversal](./code_challenges/tree_breadth_first/README.md))
 1. ([Trees - Fizz Buzz](./code_challenges/tree_fizz_buzz/README.md))
-
+1. ([Insertion Sort](./sorts/insertion_sort/README.md))
 
 
 ### Folder and Challenge Setup
