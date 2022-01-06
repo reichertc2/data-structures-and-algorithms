@@ -1,6 +1,8 @@
-# Insertion Sort
+# Merge Sort
 
-TBD
+Merge sort is a sorting function with one argument of a list and returns a sorted list. The execution at a basic level is it splits the list in half and compares values and swaps them if out of order.
+
+The following will be demonstrated and explained in a combination of a recursive and iterative functions.
 
 ## Psuedocode
 
