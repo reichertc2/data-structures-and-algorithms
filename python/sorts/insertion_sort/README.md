@@ -21,6 +21,16 @@ The approach I took was to write the code first with an idea of getting to the e
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
 ```
-TBD
+def insertion_sort(arr):
+    for i in len(arr):
+        j = i - 1
+        temp = arr[i]
+
+        while j >= 0 and temp < arr[j]:
+            arr[j + 1] = arr[j]
+            j = j -1
+
+        arr[j + 1] == temp
+
 ```
 
