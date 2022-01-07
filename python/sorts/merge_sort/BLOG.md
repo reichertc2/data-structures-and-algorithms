@@ -44,15 +44,19 @@ ALGORITHM Merge(left, right, arr)
 ```
 ## Trace
 
-TBD
+The sort function takes in a list as an argument. For this example we will use the list ```ls = [8,4,23,42,16,15]```.
 
 ### Pass #1
 
-TBD
+The first pass declare a ```n``` as the length of the list. Then enter into a conditional stating if ```n > 1```, if it is true then execute the following sequence. declare ```mid``` is equal to ```n/2```, declare ```left``` is equal to ```arr[0:mid]```, and declare ```right``` is equal to ```arr[mid:n]```.
+
+Then the next part gets fun. recursively enter into the ```merge_sort``` function for ```left``` and ```right```. Lastly enter into a helper function ```merge``` with ```left```, ```right```, and ```arr``` as arguments.
+
+
 
 ## Efficiency
 
 - Time:
-    - TBD
+    - O(N*log(n))
 - Space:
-    - TBD
+    - O(N)
