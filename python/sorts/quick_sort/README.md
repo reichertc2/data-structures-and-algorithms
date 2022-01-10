@@ -21,5 +21,20 @@ The approach I took was to write the code first with an idea of getting to the e
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
 ```
-TBD
+def quick_sort(arr, left, right):
+    if left < right:
+        position = partition(arr, left, right)
+        quick_sort(arr, left, position - 1)
+        quick_sort(arr, position + 1, right)
+
+
+def partition(arr, left, right):
+    pivot = arr[right]
+    low = left - 1
+    for i in range(left,right):
+        if arr[i]<pivot:
+            low += 1
+            arr[low],arr[i] = arr[i],arr[i]
+    arr[low + 1],arr[right] = arr[right], arr[low + 1]
 ```
+<!-- good yutube overview --= https://www.youtube.com/watch?v=0SkOjNaO1XY -->

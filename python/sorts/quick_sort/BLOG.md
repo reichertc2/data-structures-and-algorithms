@@ -1,6 +1,6 @@
-# Merge Sort
+# Quick Sort
 
-Merge sort is a sorting function with one argument of a list and returns a sorted list. The execution at a basic level is it splits the list in half and compares values and swaps them if out of order.
+Quick sort is a sorting function with three arguments of: a list, left most index, and right most index. At the most high level, quick sort identifies the left and right most limits inside of a list. Sets a low and high point and identifies a pivot point in the range. Compares each index the pivot point and reassigns indexes based on a conditional of higher or lower than the pivot.
 
 The following will be demonstrated and explained in a combination of a recursive and iterative functions.
 
@@ -51,6 +51,6 @@ ALGORITHM Swap(arr, i, low)
 ## Efficiency
 
 - Time:
-    - TBD
+    - O(n log(n))
 - Space:
-    - TBD
+    - O(n)
