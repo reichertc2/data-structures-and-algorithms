@@ -20,6 +20,7 @@ The approach I took was to write the code first with an idea of getting to the e
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
+<!-- https://stephenagrice.medium.com/how-to-implement-a-hash-table-in-python-1eb6c55019fd -->
 ```
 TBD
 ```
