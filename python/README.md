@@ -18,6 +18,8 @@
 1. ([Insertion Sort](./sorts/insertion_sort/README.md))
 1. ([Merge Sort](./sorts/merge_sort/README.md))
 1. ([Quick Sort](./sorts/quick_sort/README.md))
+1. ([Hash Table](./hash_table/README.md))
+
 
 
 ### Folder and Challenge Setup
