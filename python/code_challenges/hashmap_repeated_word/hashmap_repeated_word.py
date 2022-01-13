@@ -5,7 +5,7 @@ def hashmap_repeated_word(string):
     if len(mod_string) == 1:
         return mod_string[0]
 
-    mod_string_dict = dict.fromkeys(mod_string,0)
+    mod_string_dict = dict.fromkeys(set(mod_string),0)
     for word in mod_string:
         mod_string_dict[word] += 1
         if 2 in mod_string_dict.values():
@@ -16,7 +16,7 @@ def hashmap_repeated_word(string):
 
 def string_cleaner(string):
     new_string = string.lower()
-    punctuation = '''!()-[]};:{'",<>\\./?@#$%^&*_~'''
+    punctuation = '''!()-[]};:{'",<>\\./?@#$%^&*_~''' # also import string --> string.punctuation
     no_punctuation = ''
     for char in new_string:
        if char not in punctuation:
