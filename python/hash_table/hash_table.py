@@ -1,6 +1,6 @@
 
 
-class HashTableNode():
+class Node():
     def __init__(self, key, value):
         self.key = key
         self.value = value
@@ -13,10 +13,33 @@ class HashTable():
         self.buckets = [None] * self.capacity
 
     def add(self,key,value):
-        pass
+        self.size += 1
+        index = self.hash(key)
+        node = self.buckets[index]
+        if node is None:
+            self.buckets[index] = Node (key,value)
+            return
+        prev = node
+
+        while node is not None:
+            prev = node
+            node = node.next
+
+        prev.next = Node(key,value)
 
     def get(self,key):
-        pass
+        index = self.hash(key)
+
+        node = self.buckets[index]
+
+        while node is not None:
+            node = node.next
+
+        if node is None:
+            return None
+
+        else:
+            return node.value
 
     def contains(self,key):
         pass

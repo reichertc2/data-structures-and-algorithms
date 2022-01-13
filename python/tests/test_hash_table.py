@@ -1,12 +1,12 @@
-from hash_table.hash_table import HashTable,HashTableNode
+from hash_table.hash_table import HashTable,Node
 import pytest
 
 # @pytest.mark.skip(reason='not yet')
 def test_hash_table_node_a():
-    assert HashTableNode
+    assert Node
 
 def test_hash_table_node_b():
-    node = HashTableNode('test',202)
+    node = Node('test',202)
     actual1 = node.key
     expected1 = 'test'
     actual2 = node.value
@@ -48,3 +48,37 @@ def test_hash_table_hash_final():
     actual = hash.hash('test')
     expected = 150
     assert actual == expected
+
+# @pytest.mark.skip(reason='not yet')
+def test_hash_table_hash_add_a():
+    hash = HashTable(1024)
+    hash.add('a',15)
+    actual = hash.size
+    expected = 1
+    assert actual == expected
+
+# @pytest.mark.skip(reason='not yet')
+def test_hash_table_hash_add_b():
+    hash = HashTable(1024)
+    hash.add('a',15)
+    hash.add('b',12)
+    actual = hash.size
+    expected = 2
+    assert actual == expected
+
+
+# @pytest.mark.skip(reason='not yet')
+def test_hash_table_hash_add_final():
+    hash = HashTable(1024)
+    hash.add('a',15)
+    actual = hash.buckets[1].value
+    expected = 15
+    assert actual == expected
+
+def test_hash_table_hash_get_final():
+    hash = HashTable(1024)
+    hash.add('a',15)
+    actual = hash.get('a')
+    expected = 15
+    assert actual == expected
+
