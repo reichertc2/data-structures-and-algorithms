@@ -1,6 +1,10 @@
 # Challenge Summary 32
 Tree Intersection
 
+## Collaboration
+
+Pair programmed code, test, and pair developed white board with Chloe Nott.
+
 ## Specifications
 - Read all of these instructions carefully.
 - Name things exactly as described.
@@ -31,5 +35,60 @@ The approach I took was to write the code first with an idea of getting to the e
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
 ```
-TBD
+import queue
+from hash_table.hash_table import HashTable
+from stack_and_queue.stack_and_queue import Queue
+
+from all_trees.tree_node import Node
+from all_trees.binary_tree import BinaryTree
+
+# Create function tree_intersection with arguments of two binary trees
+# create new set variable
+# create new hashmap
+# traverse binary tree populate set
+	# breadth first traversal
+	# populate values to hashmap at each node
+# traverse second tree while utilizing hash.contains() to compare values simultaneously at each Node
+	# if contains is true add to new set
+# return new set
+
+def tree_intersection(binary_tree_a, binary_tree_b ):
+    new_set = set()
+    hash_table = HashTable()
+
+# traverse binary tree populate set
+	# breadth first traversal
+    queue_a = []
+    queue_a.insert(0,binary_tree_a.root)
+    while queue_a:
+        item = queue_a.pop()
+        # populate values to hashmap at each node
+        hash_table.add(item.value)
+
+        if item.left_child != None:
+            queue_a.insert(0,item.left_child)
+
+        if item.right_child != None:
+            queue_a.insert(0,item.right_child)
+
+# traverse second tree while utilizing hash.contains() to compare values simultaneously at each Node
+    queue_b = []
+    queue_b.insert(0,binary_tree_b.root)
+
+    while queue_b:
+        item = queue_b.pop()
+    # populate values to hashmap at each node
+        if hash_table.contains(item.value):
+            print('queue_b containsL',item.value)
+            new_set.add(item.value)
+
+        if item.left_child != None:
+            queue_b.insert(0,item.left_child)
+
+        if item.right_child != None:
+            queue_b.insert(0, item.right_child)
+
+	# if contains is true add to new set
+
+    return new_set
 ```

@@ -64,9 +64,6 @@ class Queue:
         return temp.value
 
 
-
-
-
     def peek(self):
         if self.front == None:
             return Exception
