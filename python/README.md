@@ -17,7 +17,10 @@
 1. ([Trees - Fizz Buzz](./code_challenges/tree_fizz_buzz/README.md))
 1. ([Insertion Sort](./sorts/insertion_sort/README.md))
 1. ([Merge Sort](./sorts/merge_sort/README.md))
-
+1. ([Quick Sort](./sorts/quick_sort/README.md))
+1. ([Hash Table](./hash_table/README.md))
+1. ([Hashmap Repeated Word](./code_challenges/hashmap_repeated_word/README.md))
+1. ([Tree Intersection](./code_challenges/tree_intersection/README.md))
 
 
 ### Folder and Challenge Setup
