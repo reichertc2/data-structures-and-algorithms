@@ -12,7 +12,7 @@ class HashTable():
         self.size = 0
         self.buckets = [None] * self.capacity
 
-    def add(self,key,value):
+    def add(self,key,value=None):
         self.size += 1
         index = self.hash(key)
         node = self.buckets[index]
@@ -42,12 +42,27 @@ class HashTable():
             return node.value
 
     def contains(self,key):
-        pass
+
+        index = self.hash(key)
+        node = self.buckets[index]
+
+        if node is None:
+            return False
+
+
+        while node is not None:
+            if node.key == key:
+                return True
+
+            node = node.next
+
+        return False
+
 
     def hash(self,key):
         hashsum = 0
-        for idx, value in enumerate(key):
-            hashsum += (idx + len(key)) **ord(value)
+        for idx, value in enumerate(str(key)):
+            hashsum += (idx + len(str(key))) **ord(value)
 
             hashsum = hashsum % self.capacity
 

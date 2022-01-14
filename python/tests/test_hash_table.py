@@ -75,6 +75,7 @@ def test_hash_table_hash_add_final():
     expected = 15
     assert actual == expected
 
+@pytest.mark.skip(reason='not yet')
 def test_hash_table_hash_get_final():
     hash = HashTable(1024)
     hash.add('a',15)
@@ -82,3 +83,19 @@ def test_hash_table_hash_get_final():
     expected = 15
     assert actual == expected
 
+
+# @pytest.mark.skip(reason='not yet')
+def test_hash_table_hash_contains_a():
+    hash = HashTable(1024)
+    hash.add('a',15)
+    actual = hash.contains('a')
+    expected = True
+    assert actual == expected
+
+# @pytest.mark.skip(reason='not yet')
+def test_hash_table_hash_contains_b():
+    hash = HashTable(1024)
+    hash.add(15)
+    actual = hash.contains(15)
+    expected = True
+    assert actual == expected
