@@ -21,6 +21,8 @@
 1. ([Hash Table](./hash_table/README.md))
 1. ([Hashmap Repeated Word](./code_challenges/hashmap_repeated_word/README.md))
 1. ([Tree Intersection](./code_challenges/tree_intersection/README.md))
+1. ([Hashmap Left Join](./code_challenges/hashmap_left_join/README.md))
+1. ([Graph](./graphs/README.md))
 
 
 ### Folder and Challenge Setup

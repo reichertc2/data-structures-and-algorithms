@@ -3,7 +3,7 @@ Tree Intersection
 
 ## Collaboration
 
-Pair programmed code, test, and pair developed white board with Chloe Nott.
+Pair programmed code, test, and pair developed white board with Chloe Nott. GitHub @chloenott.
 
 ## Specifications
 - Read all of these instructions carefully.
