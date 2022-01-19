@@ -3,7 +3,7 @@ from graphs.graph import Graph, Vertex
 
 
 # ----- tests per the demo ----
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_add_node():
     graph = Graph()
     expected = "spam"  # a vertex's value that comes back
@@ -11,21 +11,21 @@ def test_add_node():
     actual = added_vertex.value
     assert actual == expected
 
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_size_empty():
     graph = Graph()
     expected = 0
     actual = graph.size()
     assert actual == expected
 
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_get_nodes_empty():
     graph = Graph()
     expected = []
     actual = graph.get_nodes()
     assert actual == expected
 
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_size():
     graph = Graph()
     graph.add_node("spam")
