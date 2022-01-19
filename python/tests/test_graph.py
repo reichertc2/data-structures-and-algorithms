@@ -25,7 +25,7 @@ def test_get_nodes_empty():
     actual = graph.get_nodes()
     assert actual == expected
 
-# @pytest.mark.skip(reason='not yet')
+@pytest.mark.skip(reason='not yet')
 def test_size():
     graph = Graph()
     graph.add_node("spam")
